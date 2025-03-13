@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <main>
+        <form>
+            <i id="location-icon" class="fa-solid fa-location-dot"></i>
+            <input type="text" name="city" id="city" placeholder="Buscar cidade">
+            <button type="button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <div id="weather">
+            <h1 id="city-name">Camboriú, SC</h1>
+
+            <div id="infos">
+                <div id="temp">
+                    <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="imagem do tempo">
+
+                    <div>
+                        <p id="temp-value">
+                            32<sup>ºc</sup>
+                        </p>
+        
+                        <p id="temp-description">
+                            Ensolarado
+                        </p>
+                    </div>
+                </div>
+
+                <div id="others-infos">
+                    <div class="info">
+                        <i id="temp-max-icon" class="fa-solid fa-temperature-high"></i>
+
+                        <div>
+                            <h2>Temp. max</h2>
+                            <p id="temp-max">
+                                39<sup>ºc</sup>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <i id="temp-min-icon" class="fa-solid fa-temperature-low"></i>
+
+                        <div>
+                            <h2>Temp. min</h2>
+                            <p id="temp-min">
+                                26<sup>ºc</sup>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <i id="humidity-icon" class="fa-solid fa-droplet"></i>
+
+                        <div>
+                            <h2>Humidade</h2>
+                            <p id="humidity">
+                                38%
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <i id="wind-icon" class="fa-solid fa-wind"></i>
+
+                        <div>
+                            <h2>Vento</h2>
+                            <p id="wind">
+                                78 km/h
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #D2D5D9;
+    --dark: #023059;
+    --blue1: #023E73;
+    --blue2: #5E6D8C;
+    --blue3: #8D95A6;
+    --temp-max-icon: rgb(255, 34, 34);
+    --temp-min-icon: rgb(52, 52, 255);
+    --humidity-icon: rgb(0, 255, 255);
+    --wind-icon: rgb(148, 13, 148);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(180deg, var(--dark) 20%, var(--blue1) );
+}
+
+/* Main */
+main {
+    width: 350px;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blue1);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.100);
+}
+
+/* Formulario */
+main form {
+    width: 100%;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#location-icon {
+    font-size: 1.3em;
+    color: var(--white);
+}
+
+#city {
+    width: 80%;
+    height: 27px;
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: var(--white);
+    margin: 0px 9px;
+}
+
+#city:focus-visible {
+    outline: none;
+}
+
+#city::placeholder {
+    color: black;
+}
+
+form button {
+    width: 15px;
+    height: 27px;
+    font-size: 1.2em;
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    cursor: pointer;
+    transition: .3s;
+}
+
+form button:hover {
+    text-shadow: 2px 2px 5px var(--dark);
+}
+
+/* Weather */
+#weather {
+    width: 100%;
+    height: 90%;
+    text-align: center;
+}
+
+#city-name {
+    color: var(--white);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Infos */
+#temp {
+    width: 100%;
+    height: 155px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--dark);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.100);
+}
+
+#temp img {
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+}
+
+#temp div {
+    width: 60%;
+}
+
+#temp-value {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--white);
+}
+
+#temp-description {
+    font-size: 1.7em;
+    font-weight: bold;
+    color: var(--white);
+}
+
+#infos {
+    width: 100%;
+    height: 100%;
+}
+
+/* Others-infos */
+#others-infos {
+    width: 100%;
+    height: 60%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.info {
+    width: 45%;
+    height: 70px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark );
+    color: var(--white);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.100);
+}
+
+.info div {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info div h2 {
+    font-size: 1.2em;
+}
+
+.info p {
+    font-size: 1.3em;
+}
+
+/* icons */
+#temp-max-icon, #temp-min-icon, #humidity-icon, #wind-icon {
+    font-size: 1.5em;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+}
+
+#temp-max-icon {
+    color: var(--temp-max-icon);
+}
+
+#temp-min-icon {
+    color: var(--temp-min-icon);
+}
+
+#humidity-icon {
+    color: var(--humidity-icon);
+}
+
+#wind-icon {
+    color: var(--wind-icon);
+}
+
+@media screen and (max-width: 380px) {
+    main {
+        width: 95vw;
+    }
+
+    #temp-max-icon, #temp-min-icon, #humidity-icon, #wind-icon {
+        font-size: 1.5em;
+    }
+
+    .info div h2 {
+        font-size: 1em;
+    }
+    
+    .info p {
+        font-size: 1.3em;
+    }
+}
