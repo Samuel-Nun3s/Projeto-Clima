@@ -6,30 +6,35 @@
     <title>Clima</title>
     <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script type="module" src="src/js/script.js" defer></script>
 </head>
 <body>
     <main>
         <form>
             <i id="location-icon" class="fa-solid fa-location-dot"></i>
             <input type="text" name="city" id="city" placeholder="Buscar cidade">
-            <button type="button">
+            <button type="button" id="search-button">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
-        <div id="weather">
+
+        <span id="error-input" class="hidden">Informe alguma cidade</span>
+        <span id="error-search" class="hidden">Cidade não encontrada</span>
+
+        <div id="weather" class="hidden">
             <h1 id="city-name">Camboriú, SC</h1>
 
             <div id="infos">
                 <div id="temp">
-                    <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="imagem do tempo">
+                    <img id="img-weather" src="" alt="imagem do tempo">
 
                     <div>
                         <p id="temp-value">
-                            32<sup>ºc</sup>
+
                         </p>
         
                         <p id="temp-description">
-                            Ensolarado
+
                         </p>
                     </div>
                 </div>
@@ -41,7 +46,7 @@
                         <div>
                             <h2>Temp. max</h2>
                             <p id="temp-max">
-                                39<sup>ºc</sup>
+                            
                             </p>
                         </div>
                     </div>
@@ -52,7 +57,7 @@
                         <div>
                             <h2>Temp. min</h2>
                             <p id="temp-min">
-                                26<sup>ºc</sup>
+                                
                             </p>
                         </div>
                     </div>
@@ -63,7 +68,7 @@
                         <div>
                             <h2>Humidade</h2>
                             <p id="humidity">
-                                38%
+                                
                             </p>
                         </div>
                     </div>
@@ -74,7 +79,7 @@
                         <div>
                             <h2>Vento</h2>
                             <p id="wind">
-                                78 km/h
+                                
                             </p>
                         </div>
                     </div>

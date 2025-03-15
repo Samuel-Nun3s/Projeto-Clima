@@ -88,6 +88,12 @@ form button:hover {
     text-shadow: 2px 2px 5px var(--dark);
 }
 
+#error-input, #error-search {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--temp-max-icon);
+}
+
 /* Weather */
 #weather {
     width: 100%;
@@ -198,6 +204,10 @@ form button:hover {
 
 #wind-icon {
     color: var(--wind-icon);
+}
+
+.hidden {
+    display: none;
 }
 
 @media screen and (max-width: 380px) {
